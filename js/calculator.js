@@ -6,6 +6,7 @@ class Calculator {
         this.history = [];
         this.isScientificMode = false;
         this.isDarkTheme = false;
+        this.memory = 0;
         this.updateDisplay();
     }
 
@@ -50,28 +51,12 @@ class Calculator {
         const current = parseFloat(this.currentOperand);
         if (isNaN(prev) || isNaN(current)) return;
 
-        switch (this.operation) {
-            case '+':
-                computation = prev + current;
-                break;
-            case '-':
-                computation = prev - current;
-                break;
-            case '×':
-                computation = prev * current;
-                break;
-            case '÷':
-                if (current === 0) {
-                    alert('Cannot divide by zero!');
-                    return;
-                }
-                computation = prev / current;
-                break;
-            default:
-                return;
+        computation = OperationStrategy.operations[this.operation](prev, current);
+        if (computation === null) {
+            alert('Cannot divide by zero!');
+            return;
         }
 
-        // Add to history
         this.addToHistory(`${prev} ${this.operation} ${current} = ${computation}`);
 
         this.currentOperand = Number(computation.toFixed(8)).toString();
@@ -163,6 +148,24 @@ class Calculator {
             .slice(-3)
             .map(entry => `<div>${entry}</div>`)
             .join('');
+    }
+
+    memoryStore() {
+        this.memory = parseFloat(this.currentOperand);
+    }
+    
+    memoryRecall() {
+        this.currentOperand = this.memory.toString();
+        this.updateDisplay();
+    }
+}
+
+class OperationStrategy {
+    static operations = {
+        '+': (a, b) => a + b,
+        '-': (a, b) => a - b,
+        '×': (a, b) => a * b,
+        '÷': (a, b) => b !== 0 ? a / b : null
     }
 }
 
