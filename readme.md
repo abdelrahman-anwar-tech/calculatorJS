@@ -1,48 +1,145 @@
-# Modern Calculator
+# Advanced Modern Calculator
 
-A sleek and responsive calculator built with HTML, CSS, and JavaScript. This calculator provides basic arithmetic operations with a modern user interface.
+![Last Updated](https://img.shields.io/badge/last%20updated-2025--02--24-blue)
+![Version](https://img.shields.io/badge/version-2.0-brightgreen)
+![Made with](https://img.shields.io/badge/made%20with-HTML%20CSS%20JS-yellow)
 
-## Features
+A powerful and feature-rich calculator built with modern web technologies. This calculator combines both standard and scientific functionalities with an elegant, responsive design and dark/light theme support.
 
-- Clean and modern user interface
-- Basic arithmetic operations (addition, subtraction, multiplication, division)
-- Decimal number support
-- Clear and delete functionality
-- Responsive design
-- Error handling for division by zero
+## 🚀 New Features (v2.0)
 
-## Technologies Used
+### 🧮 Calculator Modes
+- **Standard Mode**: Basic arithmetic operations
+- **Scientific Mode**: 
+  - Square (x²)
+  - Square Root (√)
+  - Percentage calculations
+  - Sign toggle (±)
+
+### 🎨 Theme Support
+- Toggle between Dark and Light themes
+- Smooth transition animations
+- Modern gradient backgrounds
+- Responsive design for all devices
+
+### 📝 History Feature
+- Tracks last 3 calculations
+- Persistent display
+- Auto-clearing of older entries
+
+### ⌨️ Keyboard Support
+| Key | Function |
+|-----|----------|
+| 0-9 | Numbers |
+| . | Decimal point |
+| + | Addition |
+| - | Subtraction |
+| * | Multiplication |
+| / | Division |
+| Enter/= | Calculate |
+| Backspace | Delete |
+| Esc | Clear All |
+
+## 🛠️ Technologies Used
 
 - HTML5
-- CSS3
+- CSS3 (with CSS Variables)
 - JavaScript (ES6+)
+- Modern CSS Grid & Flexbox
+- CSS Animations & Transitions
 
-## How to Use
+## 🚀 Getting Started
 
-1. Clone this repository
+1. Clone this repository:
+```bash
+git clone https://github.com/abdelrahman-anwar-tech/advanced-calculator.git
+```
+
 2. Open `index.html` in your web browser
 3. Start calculating!
 
-## Calculator Functions
+## 🎯 Features Overview
 
-- `AC` - Clear all calculations
-- `DEL` - Delete last entered digit
-- Basic operations: `+`, `-`, `×`, `÷`
-- Decimal point support
-- Error handling for invalid operations
+### Core Functions
+- Basic arithmetic operations (+, -, ×, ÷)
+- Scientific calculations (x², √, %)
+- Decimal number support
+- Clear (AC) and delete (DEL) functions
+- Error handling (division by zero, invalid operations)
 
-## Screenshot
+### UI/UX Features
+- Responsive design for all screen sizes
+- Interactive button feedback
+- Smooth animations
+- History tracking
+- Theme switching
+- Mode toggling
 
-(Add a screenshot of your calculator here)
+## 🎨 Theme Previews
 
-## License
+### Light Theme
+- Clean, modern interface
+- Gradient background
+- High contrast for better readability
 
-MIT License - feel free to use this code for your own projects!
+### Dark Theme
+- Eye-friendly dark mode
+- Custom color palette
+- Perfect for low-light environments
 
-## Author
+## 🔧 Technical Details
 
-Abdelrahman Anwar
+### CSS Features
+- CSS Grid for calculator layout
+- Flexbox for responsive design
+- CSS Variables for theming
+- Transition animations
+- Media queries for responsiveness
 
-## Contributing
+### JavaScript Features
+- Class-based architecture
+- Event delegation
+- Keyboard event handling
+- History management
+- Theme state management
 
-Contributions are welcome! Please feel free to submit a Pull Request.
+## 📱 Responsive Design
+
+The calculator is fully responsive and works on:
+- Desktop computers
+- Laptops
+- Tablets
+- Mobile phones
+
+## 🐛 Bug Reporting
+
+Found a bug? Please open an issue with:
+1. Bug description
+2. Steps to reproduce
+3. Expected vs actual behavior
+4. Screenshots (if applicable)
+
+## 🤝 Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request. For major changes:
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+## 📝 License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+## 👤 Author
+
+**Abdelrahman Anwar**
+- GitHub: [@abdelrahman-anwar-tech](https://github.com/abdelrahman-anwar-tech)
+- Last Updated: 2025-02-24
+
+## 🙏 Acknowledgments
+
+- Inspired by modern calculator designs
+- Built using modern web technologies
