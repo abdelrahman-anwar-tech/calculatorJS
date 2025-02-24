@@ -3,34 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Modern Calculator</title>
+    <title>Advanced Calculator</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <div class="calculator-container">
         <div class="calculator">
             <div class="display">
+                <div class="history" id="history"></div>
                 <div class="previous-operand" id="previousOperand"></div>
                 <div class="current-operand" id="currentOperand">0</div>
             </div>
-            <button class="span-two" onclick="calculator.clear()">AC</button>
-            <button onclick="calculator.delete()">DEL</button>
-            <button onclick="calculator.appendOperator('÷')">÷</button>
-            <button onclick="calculator.appendNumber('7')">7</button>
-            <button onclick="calculator.appendNumber('8')">8</button>
-            <button onclick="calculator.appendNumber('9')">9</button>
-            <button onclick="calculator.appendOperator('×')">×</button>
-            <button onclick="calculator.appendNumber('4')">4</button>
-            <button onclick="calculator.appendNumber('5')">5</button>
-            <button onclick="calculator.appendNumber('6')">6</button>
-            <button onclick="calculator.appendOperator('-')">-</button>
-            <button onclick="calculator.appendNumber('1')">1</button>
-            <button onclick="calculator.appendNumber('2')">2</button>
-            <button onclick="calculator.appendNumber('3')">3</button>
-            <button onclick="calculator.appendOperator('+')">+</button>
-            <button onclick="calculator.appendNumber('0')">0</button>
-            <button onclick="calculator.appendNumber('.')">.</button>
-            <button class="span-two" onclick="calculator.compute()">=</button>
+            <div class="mode-switch">
+                <button onclick="calculator.toggleMode()" id="modeToggle">Standard</button>
+                <button onclick="calculator.toggleTheme()" id="themeToggle">🌙</button>
+            </div>
+            <div class="calculator-grid standard-mode" id="calculatorGrid">
+                <button class="scientific-btn" onclick="calculator.calculateSquare()">x²</button>
+                <button class="scientific-btn" onclick="calculator.calculateSquareRoot()">√</button>
+                <button class="scientific-btn" onclick="calculator.calculatePercent()">%</button>
+                <button class="scientific-btn" onclick="calculator.toggleSign()">±</button>
+                
+                <button class="span-two" onclick="calculator.clear()">AC</button>
+                <button onclick="calculator.delete()">DEL</button>
+                <button onclick="calculator.appendOperator('÷')">÷</button>
+                <button onclick="calculator.appendNumber('7')">7</button>
+                <button onclick="calculator.appendNumber('8')">8</button>
+                <button onclick="calculator.appendNumber('9')">9</button>
+                <button onclick="calculator.appendOperator('×')">×</button>
+                <button onclick="calculator.appendNumber('4')">4</button>
+                <button onclick="calculator.appendNumber('5')">5</button>
+                <button onclick="calculator.appendNumber('6')">6</button>
+                <button onclick="calculator.appendOperator('-')">-</button>
+                <button onclick="calculator.appendNumber('1')">1</button>
+                <button onclick="calculator.appendNumber('2')">2</button>
+                <button onclick="calculator.appendNumber('3')">3</button>
+                <button onclick="calculator.appendOperator('+')">+</button>
+                <button onclick="calculator.appendNumber('0')">0</button>
+                <button onclick="calculator.appendNumber('.')">.</button>
+                <button class="span-two" onclick="calculator.compute()">=</button>
+            </div>
         </div>
     </div>
     <script src="js/calculator.js"></script>
